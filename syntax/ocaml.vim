@@ -80,10 +80,10 @@ syn cluster  ocamlContained contains=ocamlTodo,ocamlPreDef,ocamlModParam,ocamlMo
 
 
 " Enclosing delimiters
-syn region   ocamlEncl transparent matchgroup=ocamlKeyword start="(" matchgroup=ocamlKeyword end=")" contains=ALLBUT,@ocamlContained,ocamlParenErr
-syn region   ocamlEncl transparent matchgroup=ocamlKeyword start="{" matchgroup=ocamlKeyword end="}"  contains=ALLBUT,@ocamlContained,ocamlBraceErr
-syn region   ocamlEncl transparent matchgroup=ocamlKeyword start="\[" matchgroup=ocamlKeyword end="\]" contains=ALLBUT,@ocamlContained,ocamlBrackErr
-syn region   ocamlEncl transparent matchgroup=ocamlKeyword start="\[|" matchgroup=ocamlKeyword end="|\]" contains=ALLBUT,@ocamlContained,ocamlArrErr
+syn region   ocamlEncl transparent matchgroup=Delimiter start="(" matchgroup=Delimiter end=")" contains=ALLBUT,@ocamlContained,ocamlParenErr
+syn region   ocamlEncl transparent matchgroup=Delimiter start="{" matchgroup=Delimiter end="}"  contains=ALLBUT,@ocamlContained,ocamlBraceErr
+syn region   ocamlEncl transparent matchgroup=Delimiter start="\[" matchgroup=Delimiter end="\]" contains=ALLBUT,@ocamlContained,ocamlBrackErr
+syn region   ocamlEncl transparent matchgroup=Delimiter start="\[|" matchgroup=Delimiter end="|\]" contains=ALLBUT,@ocamlContained,ocamlArrErr
 
 
 " Comments
@@ -295,35 +295,35 @@ if version >= 508 || !exists("did_ocaml_syntax_inits")
 
   HiLink ocamlComment	   Comment
 
-  HiLink ocamlModPath	   Include
+  HiLink ocamlModPath	   Constant
   HiLink ocamlObject	   Include
-  HiLink ocamlModule	   Include
-  HiLink ocamlModParam1    Include
-  HiLink ocamlGenMod       Include
-  HiLink ocamlModType	   Include
-  HiLink ocamlMPRestr3	   Include
-  HiLink ocamlFullMod	   Include
-  HiLink ocamlFuncWith	   Include
-  HiLink ocamlModParam     Include
-  HiLink ocamlModTypeRestr Include
-  HiLink ocamlWith	   Include
-  HiLink ocamlMTDef	   Include
+  HiLink ocamlModule	   Type
+  HiLink ocamlModParam1    Constant
+  HiLink ocamlGenMod       Constant
+  HiLink ocamlModType	   Constant
+  HiLink ocamlMPRestr3	   Constant
+  HiLink ocamlFullMod	   Constant
+  HiLink ocamlFuncWith	   Delimiter
+  HiLink ocamlModParam     Delimiter
+  HiLink ocamlModTypeRestr Constant
+  HiLink ocamlWith	   Constant
+  HiLink ocamlMTDef	   Constant
 
   HiLink ocamlScript	   Include
 
   HiLink ocamlConstructor  Constant
 
   HiLink ocamlVal          Keyword
-  HiLink ocamlModPreRHS    Keyword
+  HiLink ocamlModPreRHS    Operator
   HiLink ocamlMPRestr2	   Keyword
   HiLink ocamlKeyword	   Keyword
   HiLink ocamlMethod	   Include
-  HiLink ocamlFunDef	   Keyword
-  HiLink ocamlRefAssign    Keyword
-  HiLink ocamlKeyChar	   Keyword
+  HiLink ocamlFunDef	   Operator
+  HiLink ocamlRefAssign    Operator
+  HiLink ocamlKeyChar	   Operator
   HiLink ocamlAnyVar	   Keyword
   HiLink ocamlTopStop	   Keyword
-  HiLink ocamlOperator	   Keyword
+  HiLink ocamlOperator	   Operator
 
   HiLink ocamlBoolean	   Boolean
   HiLink ocamlCharacter    Character
