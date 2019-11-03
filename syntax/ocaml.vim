@@ -81,10 +81,10 @@ syn cluster  ocamlContained contains=ocamlTodo,ocamlPreDef,ocamlModParam,ocamlMo
 
 
 " Enclosing delimiters
-syn region   ocamlEncl transparent matchgroup=ocamlKeyword start="(" matchgroup=ocamlKeyword end=")" contains=ALLBUT,@ocamlContained,ocamlParenErr
-syn region   ocamlEncl transparent matchgroup=ocamlKeyword start="{" matchgroup=ocamlKeyword end="}"  contains=ALLBUT,@ocamlContained,ocamlBraceErr
-syn region   ocamlEncl transparent matchgroup=ocamlKeyword start="\[" matchgroup=ocamlKeyword end="\]" contains=ALLBUT,@ocamlContained,ocamlBrackErr
-syn region   ocamlEncl transparent matchgroup=ocamlKeyword start="\[|" matchgroup=ocamlKeyword end="|\]" contains=ALLBUT,@ocamlContained,ocamlArrErr
+syn region   ocamlEncl transparent matchgroup=Delimiter start="(" matchgroup=Delimiter end=")" contains=ALLBUT,@ocamlContained,ocamlParenErr
+syn region   ocamlEncl transparent matchgroup=Delimiter start="{" matchgroup=Delimiter end="}"  contains=ALLBUT,@ocamlContained,ocamlBraceErr
+syn region   ocamlEncl transparent matchgroup=Delimiter start="\[" matchgroup=Delimiter end="\]" contains=ALLBUT,@ocamlContained,ocamlBrackErr
+syn region   ocamlEncl transparent matchgroup=Delimiter start="\[|" matchgroup=Delimiter end="|\]" contains=ALLBUT,@ocamlContained,ocamlArrErr
 
 
 " Comments
@@ -317,33 +317,33 @@ hi def link ocamlErr	   Error
 
 hi def link ocamlComment	   Comment
 
-hi def link ocamlModPath	   Include
-hi def link ocamlObject	   Include
-hi def link ocamlModule	   Include
-hi def link ocamlModParam1    Include
-hi def link ocamlGenMod       Include
-hi def link ocamlModType	   Include
-hi def link ocamlMPRestr3	   Include
-hi def link ocamlFullMod	   Include
-hi def link ocamlFuncWith	   Include
-hi def link ocamlModParam     Include
-hi def link ocamlModTypeRestr Include
-hi def link ocamlWith	   Include
-hi def link ocamlMTDef	   Include
-hi def link ocamlSigEncl	   ocamlModule
-hi def link ocamlStructEncl	   ocamlModule
+hi def link ocamlModPath	   Type
+hi def link ocamlObject	   Type
+hi def link ocamlModule	   Type
+hi def link ocamlModParam1    Type
+hi def link ocamlGenMod       Type
+hi def link ocamlModType	   Type
+hi def link ocamlMPRestr3	   Type
+hi def link ocamlFullMod	   Type
+hi def link ocamlFuncWith	   Delimiter
+hi def link ocamlModParam     Delimiter
+hi def link ocamlModTypeRestr Type
+hi def link ocamlWith	   Type
+hi def link ocamlMTDef	   Type
+hi def link ocamlSigEncl	   Keyword
+hi def link ocamlStructEncl	   Keyword
 
 hi def link ocamlScript	   Include
 
 hi def link ocamlConstructor  Constant
 
 hi def link ocamlVal          Keyword
-hi def link ocamlModPreRHS    Keyword
+hi def link ocamlModPreRHS    Operator
 hi def link ocamlMPRestr2	   Keyword
 hi def link ocamlKeyword	   Keyword
 hi def link ocamlMethod	   Include
 hi def link ocamlArrow	   Keyword
-hi def link ocamlKeyChar	   Keyword
+hi def link ocamlKeyChar	   Operator
 hi def link ocamlAnyVar	   Keyword
 hi def link ocamlTopStop	   Keyword
 
